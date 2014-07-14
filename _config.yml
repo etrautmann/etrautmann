@@ -1,26 +1,35 @@
+# Dependencies
+markdown:         redcarpet
+redcarpet:
+  extensions: ["tables"]
 
+pygments:         true
 
-pygments: false
-lsi: false
-permalink: /:year/:month/:day/:title.html
-# paginate: 50
-markdown: rdiscount
-# enables SmartyPants (nice curly quotation marks, em/en dashes, elipses, etc):
-rdiscount:
-   extensions: [smart]
-# Since GH pages override this to "true", we test this value to see if we are running locally
-safe: false
-include: [".well-known"]
+# Permalinks
+permalink:        pretty
 
-# Site settings
-# title: Your awesome title
-# email: your-email@domain.com
-# description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
-# baseurl: ""
-# url: "http://yourdomain.com"
-# twitter_username: jekyllrb
-# github_username:  jekyll
+# Setup
+title:            Eric Trautmann
+tagline:          'asdfasdfasdfasdf'
 
-# Build settings
-# markdown: kramdown
-# permalink: pretty
+author:
+  name:           'Eric Trautmann'
+
+paginate:         1
+
+# Custom vars
+version:          1.0.0
+
+github:
+  repo:           github.com/etrautmann/etrautmann.github.io
+
+# This is the list of pages to incldue in the header of the website.
+pages_list:       
+  About: '/about/'
+  Archive: '/archive/'
+  Feed: '/atom.xml'
+
+# Allow URL Redirects: 
+#  * https://help.github.com/articles/redirects-on-github-pages
+gems:
+  - jekyll-redirect-from
